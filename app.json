@@ -1,0 +1,37 @@
+{
+  "expo": {
+    "name": "run-tracker",
+    "slug": "run-tracker",
+    "version": "1.0.0",
+    "scheme": "runtracker",
+    "ios": {
+      "bundleIdentifier": "com.you.runtracker",
+      "infoPlist": {
+        "UIBackgroundModes": ["location"]
+      }
+    },
+    "android": {
+      "package": "com.you.runtracker",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "FOREGROUND_SERVICE",
+        "FOREGROUND_SERVICE_LOCATION",
+        "POST_NOTIFICATIONS"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Used to record your run while the screen is off.",
+          "locationWhenInUsePermission": "Used to show your position on the map.",
+          "isIosBackgroundLocationEnabled": true,
+          "isAndroidBackgroundLocationEnabled": true,
+          "isAndroidForegroundServiceEnabled": true
+        }
+      ]
+    ]
+  }
+}
